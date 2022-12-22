@@ -1,0 +1,4 @@
+Flask==2.2.2
+numpy==1.19.5
+omegaconf==2.3.0
+requests==2.22.0

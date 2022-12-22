@@ -1,0 +1,15 @@
+model_access:
+  port: 8080
+  model_name: kfserving-default
+  model_sleep_time: 10
+  model_retries: 3
+  timeout: 1000
+
+coordinator_access:
+  token: mytoken
+  url_send: https://arnebzero.ru/api/v1/send_task
+  url_get: https://arnebzero.ru/api/v1/get_task
+  coord_sleep_time: 10
+  retry_after_seconds: 10
+  sending_results_retries: 50
+  timeout: 10

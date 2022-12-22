@@ -1,0 +1,21 @@
+ddim_steps: 100
+plms: True
+
+laion400m: false
+seed: 42
+config: "configs/stable-diffusion/v1-inference.yaml"
+ckpt: "models/ldm/stable-diffusion-v1/model.ckpt"
+precision: "autocast"
+n_rows: 0
+fixed_code: true
+from_file: false
+
+C: 4
+H: 256
+W: 256
+f: 4
+
+n_samples: 3
+n_iter: 1
+scale: 7.5
+ddim_eta: 0.0

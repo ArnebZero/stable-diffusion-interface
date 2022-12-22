@@ -1,0 +1,8 @@
+token: mytoken
+
+text_task:
+  min_len: 10
+  max_len: 50
+
+  min_size: 1
+  max_size: 4

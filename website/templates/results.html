@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Loading results</title>
+        <link rel="icon" type="image/png" href="{{url_for('static', filename='favicon.png')}}">
+        <style>
+            @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400&display=swap");
+            html{
+                height: 100%;
+                display: table;
+                margin: auto;
+            }
+            body{
+                font-family: "Roboto", sans-serif;
+                width: 50em;
+                height: 100%;
+                display: table-cell;
+                vertical-align: middle;
+                margin: 0 auto;
+                text-align: center;
+                font-size: medium;
+            }
+            input{
+                margin: 1em;
+                padding: 1em;
+                font-size: medium;
+                background-color: #f6f6f6;
+                border: 1px solid #f6f6f6;
+                border-radius: 0.5em;
+            }
+            input:hover{
+                border: 1px solid #aaa
+            }
+            a{
+                margin: 1em;
+                padding: 1em;
+                font-size: medium;
+                background-color: #f6f6f6;
+                border: 1px solid #f6f6f6;
+                border-radius: 0.5em;
+                text-decoration: inherit;
+                color: inherit;
+            }
+            a:hover{
+                border: 1px solid #aaa
+            }
+
+            @media screen and (max-aspect-ratio: 1/1) {
+                body{
+                    width: 100%;
+                    font-size: xx-large;
+                }
+                input{
+                    font-size: xx-large;
+                }
+                a{
+                    font-size: xx-large;
+                }
+            }
+
+            .column {
+            float: left;
+            width: 33.33%;
+            }
+            .row::after {
+            content: "";
+            clear: both;
+            display: table;
+            }
+            .subbox {
+                padding: 5pt;
+            }
+            .wrapper {
+                display: inline-grid;
+                grid-template-columns: 1fr 1fr;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>Results for input</h1>
+            <h2>{{QUERY}}</h2>
+            <div class="row">
+                <div class="column">
+                    <div class="subbox">
+                        <img src={{IMAGE_1}} alt="Image 1" style="width:100%">
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="subbox">
+                        <img src={{IMAGE_2}} alt="Image 2" style="width:100%">
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="subbox">
+                        <img src={{IMAGE_3}} alt="Image 3" style="width:100%">
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper">
+                <input type="button" onclick="location.href='/'" value="Try again" />
+                <a href="/get_images" download="images.zip">Download images</a>
+            </div>
+        </div>
+    </body>
+</html>

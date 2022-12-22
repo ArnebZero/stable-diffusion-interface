@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>500</title>
+    <link rel="icon" type="image/png" href="{{url_for('static', filename='favicon.png')}}">
+    <link type="text/css" rel="stylesheet" href="{{url_for('static', filename='500_error.css')}}" />
+</head>
+
+<body>
+    <section class="centered">
+        <h1>500 Server Error</h1>
+        <div class="container">
+            <span class="message" id="js-whoops"></span> <span class="message" id="js-appears"></span> <span
+                class="message" id="js-error"></span> <span class="message" id="js-apology"></span>
+            <div><span class="hidden" id="js-hidden">Message Here</span></div>
+        </div>
+    </section>
+    <script src="{{url_for('static', filename='500_error.js')}}"></script>
+</body>
+
+</html>

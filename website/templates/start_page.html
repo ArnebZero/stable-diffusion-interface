@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Image Generator</title>
+        <link rel="icon" type="image/png" href="{{url_for('static', filename='favicon.png')}}">
+        <style>
+            @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400&display=swap");
+            html{
+                height: 100%;
+                display: table;
+                margin: auto;
+            }
+            body{
+                font-family: "Roboto", sans-serif;
+                width: 40em;
+                height: 100%;
+                display: table-cell;
+                vertical-align: middle;
+                margin: 0 auto;
+                text-align: center;
+                font-size: medium;
+            }
+            img{
+                width: 80%;
+                margin-top: 0px;
+            }
+            input{
+                width: 90%;
+                height: 2em;
+                padding-top: 0.5em;
+                padding-bottom: 0.5em;
+                padding-left: 1em;
+                padding-right: 1em;
+                margin: 0px;
+                border-radius: 15px;
+                border: 1px solid #bbb;
+                font-size: medium;
+            }
+            button{
+                margin: 1em;
+                padding: 1em;
+                font-size: medium;
+                background-color: #f6f6f6;
+                border: 1px solid #f6f6f6;
+                border-radius: 0.5em;
+            }
+            button:hover{
+                border: 1px solid #aaa
+            }
+            @media screen and (max-aspect-ratio: 1/1) {
+                body{
+                    width: 100%;
+                    font-size: xx-large;
+                }
+                img{
+                    width: 100%;
+                }
+                input{
+                    font-size: xx-large;
+                }
+                button{
+                    font-size: xx-large;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+		    <img src="{{url_for('static', filename='start_logo.png')}}" alt="Image Generator" />
+            <form action="/get_results">
+                <input name="text" maxlength="100" />
+                <br />
+                <button type="submit">Get Image</button>
+            </form>
+        </div>
+    </body>
+</html>

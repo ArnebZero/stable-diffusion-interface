@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Too many queries</title>
+    <link type="text/css" rel="stylesheet" href="{{url_for('static', filename='too_many.css')}}" />
+    <link rel="icon" type="image/png" href="{{url_for('static', filename='favicon.png')}}">
+</head>
+
+<body>
+    <div id="toomany">
+        <div class="toomany">
+            <div class="toomany_sub">
+                <h1>Sorry</h1>
+                <h2>You can send one request at a time</h2>
+            </div>
+            <input type="button" onclick="location.href='/get_results'" value="Wait a bit" />
+        </div>
+    </div>
+</body>
+
+</html>
